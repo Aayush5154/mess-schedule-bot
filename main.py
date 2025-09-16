@@ -15,7 +15,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Bot configuration
-BOT_TOKEN = "8470181529:AAFnfNGSsMLzAJ3XhZhJ4pP8hJ1VUFXsgu4"
+BOT_TOKEN = ""
 TIMEZONE = pytz.timezone('Asia/Kolkata')
 
 # Complete Mess Schedule Data
@@ -421,3 +421,4 @@ if __name__ == "__main__":
     print("📋 Features: /today, /tomorrow, /monday to /sunday commands and automatic reminders")
 
     asyncio.run(main())
+
