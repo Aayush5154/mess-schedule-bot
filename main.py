@@ -6,7 +6,7 @@ from telegram.ext import Application, CommandHandler, ContextTypes
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from apscheduler.triggers.cron import CronTrigger
 import pytz
-
+import os
 # Configure logging
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -15,7 +15,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Bot configuration
-BOT_TOKEN = ""
+BOT_TOKEN = os.getenv("TELEGRAM_TOKEN")
 TIMEZONE = pytz.timezone('Asia/Kolkata')
 
 # Complete Mess Schedule Data
@@ -421,4 +421,5 @@ if __name__ == "__main__":
     print("📋 Features: /today, /tomorrow, /monday to /sunday commands and automatic reminders")
 
     asyncio.run(main())
+
 
